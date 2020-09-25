@@ -1,65 +1,123 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Supermetalai</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <section
+        className={styles.containerTop}
+        style={{
+          backgroundImage: "url(" + "/1221.png" + ")",
+        }}
+      >
+        <nav>
+          <div>
+            <div>
+              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
+            </div>
+            <div>
+              <img src="supermetalai.png" alt="super"></img>
+              <p>APIE MUS</p>
+              <p>PASLAUGOS</p>
+              <p>KLIENTAMS</p>
+              <p>SUPIRKIMO TVARKA</p>
+              <p>KONTAKTAI</p>
+            </div>
+          </div>
+        </nav>
+        <div className={styles.googleMaps}>
+          <div>
+            <div className={styles.googleMapsFrame}>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.6035394343805!2d21.13626611624251!3d55.70569586186141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e4dbf6ee739ae7%3A0x9f3b49ac75ea3279!2zNTXCsDQyJzE3LjYiTiAyMcKwMDgnMTguNCJF!5e0!3m2!1slt!2slt!4v1601036080308!5m2!1slt!2slt"></iframe>
+              <p>Aikštelė 1</p>
+            </div>
+            <p>Kalno g. 1, Klaipėda</p>
+          </div>
+          <div>
+            <div className={styles.googleMapsFrame}>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.6035394343805!2d21.13626611624251!3d55.70569586186141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e4dbf6ee739ae7%3A0x9f3b49ac75ea3279!2zNTXCsDQyJzE3LjYiTiAyMcKwMDgnMTguNCJF!5e0!3m2!1slt!2slt!4v1601036080308!5m2!1slt!2slt"></iframe>
+              <p>Aikštelė 2</p>
+            </div>
+            <p>Kalno g. 2, Klaipėda</p>
+          </div>
         </div>
-      </main>
+        <img
+          className={styles.goldRight}
+          src="goldRight.png"
+          alt="gold line"
+        ></img>
+      </section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <section className={styles.containerPopuliariausi}>
+        <img src="goldLeft.png" alt="gold left"></img>
+        <img src="icon.png" alt="gold line"></img>
+
+        <div className={styles.populiariausiTitle}>
+          <p>POPULIARIAUSIŲ</p>
+          <p>METALO RŪŠIŲ SUPIRKIMO KAINOS</p>
+        </div>
+
+        <div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+        </div>
+
+        <div className={styles.populiariausias}>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+          <div>
+            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
+            <p>EUR/tona</p>
+          </div>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
