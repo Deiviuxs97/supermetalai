@@ -8,7 +8,10 @@ export default function Klientams() {
         <nav>
           <div>
             <div>
-              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>
+                <a href="tel:+37060523568">8 605 23 568</a>,
+                <a href="mailto:info@supermetalai.lt">info@supermetalai.lt</a>
+              </p>
               <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
             </div>
             <div>
@@ -34,18 +37,12 @@ export default function Klientams() {
           </div>
         </nav>
         <div>
-          <img src="/icon.png" alt="icon" className={styles.icon} />
+          {/* <img src="/icon.png" alt="icon" className={styles.icon} /> */}
           <p className={styles.bText}>KLIENTAMS</p>
         </div>
         <div className={styles.fIrJuridinis}>
-          <div>
-            <p>Tekstas</p>
-            <p>Fizinis ir juridinis</p>
-          </div>
-
-          <div>
-            <p>Pasiūlymo forma</p>
-          </div>
+          <p>Tekstas</p>
+          <p>Fizinis ir juridinis</p>
         </div>
       </section>
 
@@ -90,11 +87,11 @@ export default function Klientams() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -114,11 +111,11 @@ export default function Klientams() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>

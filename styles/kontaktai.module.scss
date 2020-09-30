@@ -1,12 +1,10 @@
 .containerTop {
-  // height: 100vh;
   background-color: white;
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
   margin-bottom: 3rem;
   nav {
-    position: absolute;
     width: 100%;
     background-color: #e9e8d0;
     margin-top: 0.5rem;
@@ -26,15 +24,20 @@
           color: #6a6a6a;
           font-size: 15px;
         }
+        a {
+          display: inline-block;
+          margin-left: 1rem;
+          color: #6a6a6a;
+          font-size: 15px;
+          text-decoration: none;
+        }
       }
       div:nth-child(2) {
+        position: relative;
         text-align: right;
         img {
           position: absolute;
-          left: 0;
-          right: 51rem;
-          margin-left: auto;
-          margin-right: auto;
+          left: 0rem;
           bottom: -2.2rem;
           cursor: pointer;
         }
@@ -48,13 +51,9 @@
       }
     }
   }
-  div {
+  .textB {
     text-align: center;
-    .icon {
-      display: block;
-      margin: 0 auto;
-      padding: 15rem 0 2rem 0;
-    }
+    margin-top: 5rem;
     .bText {
       font-size: 69px;
       color: #007638;
@@ -64,31 +63,96 @@
   }
   .kontaktai {
     width: 60%;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     .rekvizitai {
-      // display: inline-block;
-      float: left;
+      margin-top: 2rem;
       width: 45%;
-
-      p {
+      background-color: #9e9653;
+      height: 25rem;
+      color: white;
+      p:nth-child(1) {
         text-align: center;
+        padding: 2rem 2rem 0;
+        font-size: 26px;
+      }
+      p {
+        text-align: left;
+        padding: 1rem 2rem 0;
+        font-size: 19px;
       }
     }
     .line {
       display: inline-block;
       border-left: 4px solid green;
-      height: 500px;
-      margin: 0 2rem;
+      height: 1000px;
+      margin: 0 auto;
+      width: auto;
     }
-    .aiksteles {
+    .googleMaps {
+      margin-top: 2rem;
       width: 45%;
-      // display: inline-block;
-      float: right;
-      div {
-        border: 2px solid;
-        margin: 1rem;
+      padding-top: 0;
+
+      .googleMapsAll {
+        width: 340px;
+        margin: 0 auto 20px;
+        .googleMapsFrame {
+          background-color: #007638;
+          iframe {
+            width: 330px;
+            height: 330px;
+            padding: 5px;
+            border: 0;
+          }
+          p {
+            font-size: 36px;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 0 0 0.4rem 2rem;
+            margin-top: 0;
+          }
+        }
         p {
-          padding: 5rem 0;
+          background-color: #007638;
+          font-size: 26px;
+          color: white;
+          font-weight: medium;
+          text-align: left;
+          padding: 0.4rem 0 0.4rem 2rem;
+          margin-top: 0.5rem;
+        }
+      }
+      .googleMapsAllTwo {
+        width: 340px;
+        margin: 0 auto;
+        .googleMapsFrame {
+          background-color: #9e9653;
+          iframe {
+            width: 330px;
+            height: 330px;
+            padding: 5px;
+            border: 0;
+          }
+          p {
+            font-size: 36px;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 0 0 0.4rem 2rem;
+            margin-top: 0;
+          }
+        }
+        p {
+          background-color: #9e9653;
+          font-size: 26px;
+          color: white;
+          font-weight: bold;
+          text-align: left;
+          padding: 0.4rem 0 0.4rem 2rem;
+          margin-top: 0.5rem;
         }
       }
     }
@@ -96,7 +160,6 @@
 }
 
 .apieMus {
-  position: relative;
   .superSign {
     padding-bottom: 20px;
     display: block;
@@ -106,14 +169,14 @@
     position: absolute;
     right: 15rem;
     z-index: -1;
-    bottom: -1rem;
+    bottom: 0;
   }
   .bg {
     position: relative;
     background-size: cover;
     width: 100%;
     padding-top: 150px;
-    z-index: -9;
+    z-index: 1;
   }
 
   .bg:before {
@@ -220,12 +283,14 @@
             display: block;
             margin: 0 auto 0.5rem;
           }
-          p {
+          a {
             font-size: 17px;
             text-align: center;
             margin: unset;
             width: unset;
             font-weight: bold;
+            color: #6a6a6a;
+            text-decoration: none;
           }
         }
       }

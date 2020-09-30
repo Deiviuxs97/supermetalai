@@ -6,18 +6,17 @@
   position: relative;
   z-index: 1;
   nav {
-    position: absolute;
     width: 100%;
-    background-color: #e9e8d0;
-    margin-top: 0.5rem;
+    padding-top: 0.5rem;
     display: flex;
     align-items: stretch;
-
     div {
       flex-direction: column;
       flex-grow: 1;
-      width: 60%;
+      width: 71rem;
       margin: 0 auto;
+      background-color: #e9e8d0;
+      padding: 0 1rem;
       div:nth-child(1) {
         text-align: right;
         p {
@@ -26,15 +25,20 @@
           color: #6a6a6a;
           font-size: 15px;
         }
+        a {
+          display: inline-block;
+          margin-left: 1rem;
+          color: #6a6a6a;
+          font-size: 15px;
+          text-decoration: none;
+        }
       }
       div:nth-child(2) {
+        position: relative;
         text-align: right;
         img {
           position: absolute;
-          left: 0;
-          right: 51rem;
-          margin-left: auto;
-          margin-right: auto;
+          left: 0rem;
           bottom: -2.2rem;
           cursor: pointer;
         }
@@ -48,15 +52,17 @@
       }
     }
   }
+
   .googleMaps {
     text-align: right;
     width: 60%;
     margin: 0 auto;
-    padding-top: 10rem;
+    padding-top: 5rem;
 
-    div:nth-child(1) {
+    .googleMapsFull {
       display: inline-block;
       width: 340px;
+      margin-bottom: 1rem;
       .googleMapsFrame {
         background-color: #007638;
         iframe {
@@ -116,16 +122,55 @@
       }
     }
   }
+
   .goldRight {
     position: absolute;
     right: 0;
     top: 40%;
     z-index: -2;
+    width: 25%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .containerTop {
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .containerTop {
+    nav {
+      div {
+        width: 96%;
+      }
+    }
+    .googleMaps {
+      width: unset;
+      margin: 0 5rem 0 5rem;
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .containerTop {
+    nav {
+      div {
+        div:nth-child(2) {
+          img {
+            position: absolute;
+            left: 0rem;
+            bottom: 0.4rem;
+            cursor: pointer;
+            width: 6rem;
+          }
+        }
+      }
+    }
   }
 }
 
 .containerPopuliariausi {
-  // height: 100vh;
   text-align: center;
   position: relative;
   img:nth-child(1) {
@@ -133,6 +178,7 @@
     left: -2rem;
     z-index: -999;
     top: 15rem;
+    width: 35%;
   }
   img:nth-child(2) {
     padding: 9rem 0 2rem;
@@ -151,11 +197,14 @@
       font-weight: bold;
     }
   }
-  .populiariausias {
-    background-color: #f4f4f4;
-  }
+  // .populiariausias {
+  //   background-color: #f4f4f4;
+  // }
   .popLast {
     margin-bottom: 10rem;
+  }
+  .populiariausiasBack {
+    background-color: #f4f4f4;
   }
   .pop,
   .populiariausias,
@@ -186,19 +235,30 @@
       }
     }
   }
-  .super {
+
+  .super,
+  .superTwo {
     margin-bottom: 4rem;
+    // display: flex;
+    // justify-content: center;
+    display: block;
+    // margin: 0 auto;
+    // width: 80%;
     div {
       display: inline-block;
       width: 25rem;
-      text-align: right;
-      // margin: 0 2rem;
+      text-align: center;
+      align-items: center;
+      // display: flex;
+      margin: 1rem;
       img {
         position: unset;
         left: unset;
         z-index: unset;
         top: unset;
         display: inline-block;
+        height: 90px;
+        padding: 0 10px;
       }
       p {
         color: #9b9a40;
@@ -207,17 +267,29 @@
         display: inline-block;
         width: 40%;
         text-align: left;
-        vertical-align: middle;
-        position: relative;
-        top: 50%;
-        transform: translateY(-200%);
       }
     }
   }
 }
 
+@media (max-width: 1279px) {
+  .pop,
+  .populiariausias,
+  .popLast {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 863px) {
+  .containerPopuliariausi {
+    .super {
+      margin: 4rem 0 0 0;
+    }
+  }
+}
+
 .apieMus {
-  // height: 100vh;
   position: relative;
   .superSign {
     padding-bottom: 20px;
@@ -228,14 +300,14 @@
     position: absolute;
     right: 15rem;
     z-index: -1;
-    bottom: -1rem;
+    bottom: 0;
   }
   .bg {
     position: relative;
     background-size: cover;
     width: 100%;
     padding-top: 150px;
-    z-index: -9;
+    z-index: 1;
   }
 
   .bg:before {
@@ -301,15 +373,15 @@
     color: #3d3d3d;
   }
   .pasiulymai {
-    width: 63%;
+    // width: 63%;
     margin: 5rem auto 0;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
     text-align: center;
     div {
-      width: 40%;
+      width: 30rem;
       display: inline-block;
       background-color: rgb(252, 250, 230, 0.8);
-      margin: 0 1rem;
+      margin: 0 1rem 4rem;
       height: 28rem;
       .phone {
         display: block;
@@ -322,12 +394,14 @@
         text-align: center;
         width: unset;
         margin: 0.4rem 0 1rem;
+        color: #656565;
       }
       .pas {
         font-size: 17px;
         text-align: justify;
         width: unset;
         margin: 0 1rem;
+        color: black;
       }
       div {
         width: 100%;
@@ -342,12 +416,14 @@
             display: block;
             margin: 0 auto 0.5rem;
           }
-          p {
+          a {
             font-size: 17px;
             text-align: center;
             margin: unset;
             width: unset;
             font-weight: bold;
+            color: #6a6a6a;
+            text-decoration: none;
           }
         }
       }
@@ -355,34 +431,44 @@
   }
 }
 
+@media (max-width: 1476px) {
+  .apieMus {
+    p:nth-child(2) {
+      color: white;
+    }
+    p:nth-child(3) {
+      color: white;
+    }
+  }
+}
+
 footer {
   .footerGreen {
     background-color: #054021;
+
     div {
       padding: 5rem 0 3rem;
       display: flex;
       justify-content: center;
+      // flex-flow: row wrap;
       .text {
         color: white;
         font-size: 14px;
         width: 33rem;
         text-align: justify;
         display: inline-block;
-        margin-right: 4rem;
+        margin: 0 3rem 0 1rem;
       }
       div {
         display: inline-block;
         padding: unset;
         width: 8rem;
-        margin: 0 1.5rem;
-        display: absolute;
-        margin-top: -1rem;
+        margin: -1rem 2rem;
         p:nth-child(1) {
           color: white;
           font-size: 28px;
           margin-bottom: 1rem;
           cursor: unset;
-          // margin: unset;
         }
         p {
           font-size: 14px;
@@ -419,5 +505,39 @@ footer {
       padding-top: 0.9rem;
       font-size: 15px;
     }
+  }
+}
+
+@media (max-width: 850px) {
+  footer {
+    .footerGreen {
+      div {
+        flex-flow: row wrap;
+        .text {
+          flex-basis: 85%;
+          margin-right: unset;
+          order: 2;
+        }
+        div {
+          flex-basis: 15%;
+          margin-bottom: 2rem;
+          order: 1;
+          // p:nth-child(1) {
+          // }
+          // p {
+          // }
+          // p:nth-child(1):hover {
+          // }
+          // p:hover {
+          // }
+        }
+      }
+    }
+    // .footerBlack {
+    //   hr {
+    //   }
+    //   p {
+    //   }
+    // }
   }
 }

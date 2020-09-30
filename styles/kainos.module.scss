@@ -6,7 +6,6 @@
   position: relative;
   text-align: center;
   nav {
-    position: absolute;
     width: 100%;
     background-color: #e9e8d0;
     margin-top: 0.5rem;
@@ -26,15 +25,24 @@
           color: #6a6a6a;
           font-size: 15px;
         }
+        a {
+          display: inline-block;
+          margin-left: 1rem;
+          color: #6a6a6a;
+          font-size: 15px;
+          text-decoration: none;
+        }
       }
       div:nth-child(2) {
+        position: relative;
         text-align: right;
         img {
           position: absolute;
-          left: 0;
-          right: 51rem;
+          left: 0rem;
+          // right: 50rem;
           margin-left: auto;
           margin-right: auto;
+          // bottom: -2.2rem;
           bottom: -2.2rem;
           cursor: pointer;
         }
@@ -48,13 +56,9 @@
       }
     }
   }
-  div {
+  .Title {
     text-align: center;
-    .icon {
-      display: block;
-      margin: 0 auto;
-      padding: 15rem 0 2rem 0;
-    }
+    margin: 5rem;
     .bText {
       font-size: 69px;
       color: #007638;
@@ -62,11 +66,37 @@
     }
   }
 
+  .super {
+    margin-bottom: 4rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    div {
+      width: 15rem;
+
+      img {
+        position: unset;
+        left: unset;
+        z-index: unset;
+        top: unset;
+        display: inline-block;
+        height: 100px;
+        padding: 0 10px;
+      }
+      p {
+        color: #9b9a40;
+        font-size: 25px;
+        font-weight: bold;
+        display: inline-block;
+      }
+    }
+  }
+
+  .pop {
+    padding-top: 0rem;
+  }
   .populiariausias {
     background-color: #f4f4f4;
-  }
-  .popLast {
-    margin-bottom: 10rem;
   }
   .pop,
   .populiariausias,
@@ -97,8 +127,17 @@
       }
     }
   }
-  .pop {
-    padding-top: 5rem;
+  .popLast {
+    margin-bottom: 10rem;
+  }
+  .tekstas {
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid;
+    margin-bottom: 2rem;
+    p {
+      margin: 5rem 0;
+    }
   }
 }
 .apieMus {
@@ -112,14 +151,14 @@
     position: absolute;
     right: 15rem;
     z-index: -1;
-    bottom: -1rem;
+    bottom: 0;
   }
   .bg {
     position: relative;
     background-size: cover;
     width: 100%;
     padding-top: 150px;
-    z-index: -9;
+    z-index: 1;
   }
 
   .bg:before {
@@ -226,12 +265,14 @@
             display: block;
             margin: 0 auto 0.5rem;
           }
-          p {
+          a {
             font-size: 17px;
             text-align: center;
             margin: unset;
             width: unset;
             font-weight: bold;
+            color: #6a6a6a;
+            text-decoration: none;
           }
         }
       }

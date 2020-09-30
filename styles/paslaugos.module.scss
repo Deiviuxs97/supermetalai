@@ -4,7 +4,6 @@
   background-size: contain;
   position: relative;
   nav {
-    position: absolute;
     width: 100%;
     background-color: #e9e8d0;
     margin-top: 0.5rem;
@@ -24,15 +23,24 @@
           color: #6a6a6a;
           font-size: 15px;
         }
+        a {
+          display: inline-block;
+          margin-left: 1rem;
+          color: #6a6a6a;
+          font-size: 15px;
+          text-decoration: none;
+        }
       }
       div:nth-child(2) {
+        position: relative;
         text-align: right;
         img {
           position: absolute;
-          left: 0;
-          right: 51rem;
+          left: 0rem;
+          // right: 50rem;
           margin-left: auto;
           margin-right: auto;
+          // bottom: -2.2rem;
           bottom: -2.2rem;
           cursor: pointer;
         }
@@ -48,12 +56,7 @@
   }
   .iconContainer {
     text-align: center;
-    margin-bottom: 8rem;
-    .icon {
-      display: block;
-      margin: 0 auto;
-      padding: 15rem 0 2rem 0;
-    }
+    margin: 5rem 0 8rem 0;
     .bText {
       font-size: 69px;
       color: #007638;
@@ -62,30 +65,26 @@
   }
   .super {
     margin-bottom: 4rem;
+    display: flex;
     text-align: center;
+    justify-content: center;
     div {
-      display: inline-block;
-      width: 25rem;
-      text-align: right;
-      // margin: 0 2rem;
+      width: 15rem;
+
       img {
         position: unset;
         left: unset;
         z-index: unset;
         top: unset;
         display: inline-block;
+        height: 100px;
+        padding: 0 10px;
       }
       p {
         color: #9b9a40;
         font-size: 25px;
         font-weight: bold;
         display: inline-block;
-        width: 40%;
-        text-align: left;
-        vertical-align: middle;
-        position: relative;
-        top: 50%;
-        transform: translateY(-200%);
       }
     }
   }
@@ -96,17 +95,20 @@
     p:nth-child(1) {
       text-align: center;
       margin-bottom: 1rem;
+      font-size: 25px;
+      color: #3d3d3d;
+      font-weight: bold;
     }
     p:nth-child(2) {
       text-align: justify;
       margin-bottom: 1rem;
+      font-size: 17px;
+      color: #3d3d3d;
     }
   }
 }
 
 .apieMus {
-  // height: 100vh;
-  margin-top: 10rem;
   position: relative;
   .superSign {
     padding-bottom: 20px;
@@ -117,14 +119,14 @@
     position: absolute;
     right: 15rem;
     z-index: -1;
-    bottom: -1rem;
+    bottom: 0;
   }
   .bg {
     position: relative;
     background-size: cover;
     width: 100%;
     padding-top: 150px;
-    z-index: -9;
+    z-index: 1;
   }
 
   .bg:before {
@@ -231,12 +233,14 @@
             display: block;
             margin: 0 auto 0.5rem;
           }
-          p {
+          a {
             font-size: 17px;
             text-align: center;
             margin: unset;
             width: unset;
             font-weight: bold;
+            color: #6a6a6a;
+            text-decoration: none;
           }
         }
       }

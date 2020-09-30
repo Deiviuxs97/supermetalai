@@ -8,7 +8,10 @@ export default function SupirkimoTvarka() {
         <nav>
           <div>
             <div>
-              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>
+                <a href="tel:+37060523568">8 605 23 568</a>,
+                <a href="mailto:info@supermetalai.lt">info@supermetalai.lt</a>
+              </p>
               <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
             </div>
             <div>
@@ -117,11 +120,7 @@ export default function SupirkimoTvarka() {
           </p>
 
           <p>Norite gauti pasiūlymą?</p>
-          <img
-            src="/goldBottom.png"
-            alt="goldBottom"
-            className={styles.image}
-          ></img>
+
           <div className={styles.pasiulymai}>
             <div>
               <img
@@ -138,11 +137,11 @@ export default function SupirkimoTvarka() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -162,17 +161,23 @@ export default function SupirkimoTvarka() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
           </div>
+          <img
+            src="/goldBottom.png"
+            alt="goldBottom"
+            className={styles.image}
+          ></img>
         </div>
       </section>
+
       <footer>
         <div className={styles.footerGreen}>
           <div>

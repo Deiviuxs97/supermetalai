@@ -8,7 +8,10 @@ export default function Kainos() {
         <nav>
           <div>
             <div>
-              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>
+                <a href="tel:+37060523568">8 605 23 568</a>,
+                <a href="mailto:info@supermetalai.lt">info@supermetalai.lt</a>
+              </p>
               <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
             </div>
             <div>
@@ -34,9 +37,36 @@ export default function Kainos() {
           </div>
         </nav>
 
-        <div>
-          <img src="/icon.png" alt="icon" className={styles.icon} />
+        <div className={styles.Title}>
+          {/* <img src="/icon.png" alt="icon" className={styles.icon} /> */}
           <p className={styles.bText}>KAINOS</p>
+        </div>
+
+        <div className={styles.super}>
+          <div>
+            <img src="/juodieji.png" alt="juodieji"></img>
+            <p>JUODIEJI METALAI</p>
+          </div>
+          <div>
+            <img src="/spalvotieji.png" alt="spalvotieji"></img>
+            <p>SPALVOTIEJI METALAI</p>
+          </div>
+          <div>
+            <img src="/skrynia.png" alt="skrynia"></img>
+            <p>TAURIEJI METALAI</p>
+          </div>
+          <div>
+            <img src="/auto.png" alt="auto"></img>
+            <p>AUTOMOBILIŲ METALAI</p>
+          </div>
+          <div>
+            <img src="/elektronika.png" alt="elektronika"></img>
+            <p>ELEKTRONINĖ ĮRANGA</p>
+          </div>
+          <div>
+            <img src="/kita.png" alt="kita"></img>
+            <p>KITI METALAI</p>
+          </div>
         </div>
 
         <div className={styles.pop}>
@@ -95,6 +125,10 @@ export default function Kainos() {
             <p>EUR/tona</p>
           </div>
         </div>
+
+        <div className={styles.tekstas}>
+          <p>Tekstas</p>
+        </div>
       </section>
 
       <section className={styles.apieMus}>
@@ -138,11 +172,11 @@ export default function Kainos() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -162,11 +196,11 @@ export default function Kainos() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>

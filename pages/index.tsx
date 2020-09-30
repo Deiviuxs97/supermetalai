@@ -1,8 +1,26 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const [windowSize, setWindowSize] = useState({});
+
+  useEffect(() => {
+    window.addEventListener("resize", handleSize);
+    return () => window.removeEventListener("scroll", handleSize);
+  });
+
+  const handleSize = () => {
+    setWindowSize(window.innerWidth);
+  };
+
+  if (windowSize <= 1030) {
+    var logo = "/favicon.png";
+  } else {
+    var logo = "/supermetalai.png";
+  }
+
   return (
     <div>
       <Head>
@@ -18,12 +36,15 @@ export default function Home() {
         <nav>
           <div>
             <div>
-              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>
+                <a href="tel:+37060523568">8 605 23 568</a>,
+                <a href="mailto:info@supermetalai.lt">info@supermetalai.lt</a>
+              </p>
               <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
             </div>
             <div>
               <Link href="/">
-                <img src="/supermetalai.png" alt="super"></img>
+                <img src={logo} alt="super"></img>
               </Link>
               <Link href="/apieMus/apieMus">
                 <p>APIE MUS</p>
@@ -44,7 +65,7 @@ export default function Home() {
           </div>
         </nav>
         <div className={styles.googleMaps}>
-          <div>
+          <div className={styles.googleMapsFull}>
             <div className={styles.googleMapsFrame}>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.6035394343805!2d21.13626611624251!3d55.70569586186141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e4dbf6ee739ae7%3A0x9f3b49ac75ea3279!2zNTXCsDQyJzE3LjYiTiAyMcKwMDgnMTguNCJF!5e0!3m2!1slt!2slt!4v1601036080308!5m2!1slt!2slt"></iframe>
               <p>Aikštelė 1</p>
@@ -61,13 +82,13 @@ export default function Home() {
         </div>
         <img
           className={styles.goldRight}
-          src="goldRight.png"
+          src="/goldRight.png"
           alt="gold line"
         ></img>
       </section>
 
       <section className={styles.containerPopuliariausi}>
-        <img src="goldLeft.png" alt="gold left"></img>
+        <img src="/goldLeft.png" alt="gold left"></img>
         <img src="icon.png" alt="gold line"></img>
 
         <div className={styles.populiariausiTitle}>
@@ -84,6 +105,7 @@ export default function Home() {
             <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
             <p>EUR/tona</p>
           </div>
+
           <div>
             <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
             <p>EUR/tona</p>
@@ -94,22 +116,28 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.populiariausias}>
-          <div>
-            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
-            <p>EUR/tona</p>
-          </div>
-          <div>
-            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
-            <p>EUR/tona</p>
-          </div>
-          <div>
-            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
-            <p>EUR/tona</p>
-          </div>
-          <div>
-            <p>SKK automobilių kėbulų skardos metalo laužas</p> <p>52 - 152</p>
-            <p>EUR/tona</p>
+        <div className={styles.populiariausiasBack}>
+          <div className={styles.populiariausias}>
+            <div>
+              <p>SKK automobilių kėbulų skardos metalo laužas</p>{" "}
+              <p>52 - 152</p>
+              <p>EUR/tona</p>
+            </div>
+            <div>
+              <p>SKK automobilių kėbulų skardos metalo laužas</p>{" "}
+              <p>52 - 152</p>
+              <p>EUR/tona</p>
+            </div>
+            <div>
+              <p>SKK automobilių kėbulų skardos metalo laužas</p>{" "}
+              <p>52 - 152</p>
+              <p>EUR/tona</p>
+            </div>
+            <div>
+              <p>SKK automobilių kėbulų skardos metalo laužas</p>{" "}
+              <p>52 - 152</p>
+              <p>EUR/tona</p>
+            </div>
           </div>
         </div>
 
@@ -132,34 +160,58 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Supermenai */}
+        {/* Metalai */}
         <div className={styles.super}>
           <div>
-            <img src="stand.png" alt="stand"></img>
-            <p>JUODIEJI METALAI</p>
+            <Link href="/paslaugos/juodiejiMetalai">
+              <img src="/juodieji.png" alt="juodieji"></img>
+            </Link>
+            <Link href="/paslaugos/juodiejiMetalai">
+              <p>JUODIEJI METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="fly.png" alt="fly"></img>
-            <p>SPALVOTIEJI METALAI</p>
+            <Link href="/paslaugos/spalvotiejiMetalai">
+              <img src="/spalvotieji.png" alt="spalvotieji"></img>
+            </Link>
+            <Link href="/paslaugos/spalvotiejiMetalai">
+              <p>SPALVOTIEJI METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="punch.png" alt="punch"></img>
-            <p>TAURIEJI METALAI</p>
+            <Link href="/paslaugos/tauriejiMetalai">
+              <img src="/skrynia.png" alt="skrynia"></img>
+            </Link>
+            <Link href="/paslaugos/tauriejiMetalai">
+              <p>TAURIEJI METALAI</p>
+            </Link>
           </div>
         </div>
 
-        <div className={styles.super}>
+        <div className={styles.superTwo}>
           <div>
-            <img src="fly.png" alt="fly"></img>
-            <p>AUTOMOBILIŲ METALAI</p>
+            <Link href="/paslaugos/automobiliuMetalai">
+              <img src="/auto.png" alt="auto"></img>
+            </Link>
+            <Link href="/paslaugos/automobiliuMetalai">
+              <p>AUTOMOBILIŲ METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="punch.png" alt="punch"></img>
-            <p>ELEKTRONINĖ ĮRANGA</p>
+            <Link href="/paslaugos/elektronineIranga">
+              <img src="/elektronika.png" alt="elektronika"></img>
+            </Link>
+            <Link href="/paslaugos/elektronineIranga">
+              <p>ELEKTRONINĖ ĮRANGA</p>
+            </Link>
           </div>
           <div>
-            <img src="stand.png" alt="stand"></img>
-            <p>KITI METALAI</p>
+            <Link href="/paslaugos/kitiMetalai">
+              <img src="/kita.png" alt="kita"></img>
+            </Link>
+            <Link href="/paslaugos/kitiMetalai">
+              <p>KITI METALAI</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -205,11 +257,11 @@ export default function Home() {
               <div>
                 <div>
                   <img src="phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -229,11 +281,11 @@ export default function Home() {
               <div>
                 <div>
                   <img src="phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>

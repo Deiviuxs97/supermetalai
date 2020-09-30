@@ -7,7 +7,10 @@ export default function Paslaugos() {
         <nav>
           <div>
             <div>
-              <p>8 605 23 568, info@supermetalai.lt</p>
+              <p>
+                <a href="tel:+37060523568">8 605 23 568</a>,
+                <a href="mailto:info@supermetalai.lt">info@supermetalai.lt</a>
+              </p>
               <p>Darbo laikas: I-V 8-18 val., VI 9-15 val.</p>
             </div>
             <div>
@@ -33,37 +36,58 @@ export default function Paslaugos() {
           </div>
         </nav>
         <div className={styles.iconContainer}>
-          <img src="/icon.png" alt="icon" className={styles.icon} />
+          {/* <img src="/icon.png" alt="icon" className={styles.icon} /> */}
           <p className={styles.bText}>PASLAUGOS</p>
         </div>
 
         <div className={styles.super}>
           <div>
-            <img src="/stand.png" alt="stand"></img>
-            <p>JUODIEJI METALAI</p>
+            <Link href="/paslaugos/juodiejiMetalai">
+              <img src="/juodieji.png" alt="juodieji"></img>
+            </Link>
+            <Link href="/paslaugos/juodiejiMetalai">
+              <p>JUODIEJI METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="/fly.png" alt="fly"></img>
-            <p>SPALVOTIEJI METALAI</p>
+            <Link href="/paslaugos/spalvotiejiMetalai">
+              <img src="/spalvotieji.png" alt="spalvotieji"></img>
+            </Link>
+            <Link href="/paslaugos/spalvotiejiMetalai">
+              <p>SPALVOTIEJI METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="/punch.png" alt="punch"></img>
-            <p>TAURIEJI METALAI</p>
-          </div>
-        </div>
-
-        <div className={styles.super}>
-          <div>
-            <img src="/fly.png" alt="fly"></img>
-            <p>AUTOMOBILIŲ METALAI</p>
+            <Link href="/paslaugos/tauriejiMetalai">
+              <img src="/skrynia.png" alt="skrynia"></img>
+            </Link>
+            <Link href="/paslaugos/tauriejiMetalai">
+              <p>TAURIEJI METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="/punch.png" alt="punch"></img>
-            <p>ELEKTRONINĖ ĮRANGA</p>
+            <Link href="/paslaugos/automobiliuMetalai">
+              <img src="/auto.png" alt="auto"></img>
+            </Link>
+            <Link href="/paslaugos/automobiliuMetalai">
+              <p>AUTOMOBILIŲ METALAI</p>
+            </Link>
           </div>
           <div>
-            <img src="/stand.png" alt="stand"></img>
-            <p>KITI METALAI</p>
+            <Link href="/paslaugos/elektronineIranga">
+              <img src="/elektronika.png" alt="elektronika"></img>
+            </Link>
+            <Link href="/paslaugos/elektronineIranga">
+              <p>ELEKTRONINĖ ĮRANGA</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="/paslaugos/kitiMetalai">
+              <img src="/kita.png" alt="kita"></img>
+            </Link>
+            <Link href="/paslaugos/kitiMetalai">
+              <p>KITI METALAI</p>
+            </Link>
           </div>
         </div>
 
@@ -123,11 +147,11 @@ export default function Paslaugos() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -147,11 +171,11 @@ export default function Paslaugos() {
               <div>
                 <div>
                   <img src="/phonegrey.png" alt="phone"></img>
-                  <p>212 487 2547</p>
+                  <a href="tel:+37060523568">212 487 2547</a>
                 </div>
                 <div>
                   <img src="/email.png" alt="email"></img>
-                  <p>info@gmail.com</p>
+                  <a href="mailto:info@supermetalai.lt">info@gmail.com</a>
                 </div>
               </div>
             </div>
