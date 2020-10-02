@@ -1,0 +1,179 @@
+.apieMus {
+  position: relative;
+  .superSign {
+    padding-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  .image {
+    position: absolute;
+    right: 15rem;
+    z-index: -1;
+    bottom: 0;
+  }
+  .bg {
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    padding-top: 150px;
+    z-index: 1;
+  }
+
+  .bg:before {
+    content: "";
+    border-left: 150px solid #fff;
+    border-right: 150px solid #fff;
+    border-bottom: 150px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+  }
+
+  .helper {
+    position: absolute;
+    height: 150px;
+    top: 0;
+    left: 0;
+    right: 0;
+    p:nth-child(1) {
+      font-size: 69px;
+      text-align: center;
+      margin-top: 80px;
+      color: white;
+      font-weight: bolder;
+    }
+    p:nth-child(2) {
+      font-size: 25px;
+      text-align: center;
+      color: white;
+      margin-top: unset;
+    }
+  }
+
+  .helper:before,
+  .helper:after {
+    content: "";
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(50% - 150px);
+  }
+
+  .helper:before {
+    left: 0;
+  }
+  .helper:after {
+    right: 0;
+  }
+  p:nth-child(2) {
+    font-size: 17px;
+    text-align: justify;
+    width: 500px;
+    margin: 5rem auto 2rem;
+    color: #3d3d3d;
+  }
+  p:nth-child(3) {
+    font-size: 69px;
+    text-align: center;
+    color: #3d3d3d;
+  }
+  .pasiulymai {
+    margin: 5rem auto 0;
+    padding-bottom: 5rem;
+    text-align: center;
+    div {
+      width: 30rem;
+      display: inline-block;
+      background-color: rgb(252, 250, 230, 0.8);
+      margin: 0 1rem 4rem;
+      height: 28rem;
+      .phone {
+        display: block;
+        margin: 0 auto;
+        margin-top: -50px;
+        opacity: 1;
+      }
+      .tit {
+        font-size: 36px;
+        text-align: center;
+        width: unset;
+        margin: 0.4rem 0 1rem;
+        color: #656565;
+      }
+      .pas {
+        font-size: 17px;
+        text-align: justify;
+        width: unset;
+        margin: 0 1rem;
+        color: black;
+      }
+      div {
+        width: 100%;
+        background-color: unset;
+        margin: 1rem 0;
+        height: unset;
+        text-align: center;
+
+        div {
+          width: 30%;
+          img {
+            display: block;
+            margin: 0 auto 0.5rem;
+          }
+          a {
+            font-size: 17px;
+            text-align: center;
+            margin: unset;
+            width: unset;
+            font-weight: bold;
+            color: #6a6a6a;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1476px) {
+  .apieMus {
+    .bg {
+      .apieMusTekstas {
+        color: white;
+      }
+      .pasiulymas {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .apieMus {
+    p:nth-child(2) {
+      width: 90%;
+    }
+    p:nth-child(2) {
+      font-size: 17px;
+      margin: 5rem auto 2rem;
+    }
+    p:nth-child(3) {
+      font-size: 49px;
+      text-align: center;
+    }
+    .pasiulymai {
+      div {
+        width: 90%;
+        div {
+          div {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

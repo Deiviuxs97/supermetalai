@@ -1,0 +1,45 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+
+  .nav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: white;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(255, 255, 255),
+      rgb(157, 149, 83)
+    );
+    hr {
+      margin: 0;
+      border-top: 0.125rem solid rgb(157, 149, 83);
+      width: 95%;
+      margin: 0 auto;
+    }
+    p {
+      color: #007638;
+      margin-bottom: 1px;
+      padding: 2% 0 2% 2%;
+      font-weight: bold;
+    }
+  }
+}
+// @media (min-width: 600px) {
+//   .nav {
+//     display: none;
+//     background-color: red;
+//   }
+// }

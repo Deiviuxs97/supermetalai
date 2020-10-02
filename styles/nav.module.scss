@@ -1,0 +1,139 @@
+.nav {
+  width: 100%;
+  padding-top: 0.5rem;
+  display: flex;
+  align-items: stretch;
+  .navVidus {
+    flex-direction: column;
+    flex-grow: 1;
+    width: 71rem;
+    margin: 0 auto;
+    background-color: #e9e8d0;
+    padding: 0 1rem;
+    .logo {
+      display: none;
+    }
+    .navVirsus {
+      text-align: right;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 71rem;
+      margin: 0 auto;
+      background-color: #e9e8d0;
+      padding: 0 1rem;
+      p {
+        display: inline-block;
+        margin: 1rem 0 0.8rem 2rem;
+        color: #6a6a6a;
+        font-size: 15px;
+      }
+      a {
+        display: inline-block;
+        margin-left: 1rem;
+        color: #6a6a6a;
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+    .navApacia {
+      position: relative;
+      text-align: right;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 71rem;
+      margin: 0 auto;
+      background-color: #e9e8d0;
+      padding: 0 1rem;
+      img {
+        position: absolute;
+        left: 0rem;
+        bottom: -2.2rem;
+        cursor: pointer;
+      }
+      p {
+        display: inline-block;
+        margin: 0.8rem 0 1rem 2rem;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+  .burgerToggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    .navVidus {
+      .navVirsus,
+      .navApacia {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .nav {
+    .navVidus {
+      .navApacia {
+        img {
+          position: absolute;
+          left: 0rem;
+          bottom: 0.3rem;
+          cursor: pointer;
+          width: 5.8rem;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    .navVidus {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: unset;
+      .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 5%;
+        img {
+          height: 3rem;
+        }
+      }
+      .navVirsus {
+        display: none;
+      }
+      .navApacia {
+        display: none;
+      }
+      .burgerToggle {
+        display: block;
+        margin-bottom: unset;
+        margin: unset;
+        float: right;
+        margin: 1.125rem 5% 1.125rem 0;
+        height: 1.5625rem;
+        width: 3rem;
+        div:nth-child(1) {
+          margin-top: 0;
+        }
+        div {
+          display: block;
+          width: 100%;
+          height: 0.1875rem;
+          background-color: white;
+          margin: 15%;
+          margin-bottom: unset;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
